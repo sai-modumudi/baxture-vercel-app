@@ -16,11 +16,12 @@ interface UserProfileCardProps {
 
 export default function UserProfileCard({ user: { id, name, email, phone, website }, handleDelete }: UserProfileCardProps) {
 
+    //State to keep track of follow/unfollow
     const [follow, setFollow] = useState(false);
 
-    const iconTrash = <IconTrash color="#228BE6" stroke={1.5} size="1rem" className={styles.icon} />;
-    const iconUserPlus = <IconUserPlus color="#FFFFFF" stroke={1.5} size="1rem" className={styles.icon} />;
-    const iconUserMinus = <IconUserMinus color="#242424" stroke={1.5} size="1rem" className={styles.icon} />;
+    const iconTrash = <IconTrash color="#228BE6" stroke={2} size="1rem" className={styles.icon} />;
+    const iconUserPlus = <IconUserPlus color="#FFFFFF" stroke={2} size="1rem" className={styles.icon} />;
+    const iconUserMinus = <IconUserMinus color="#242424" stroke={2} size="1rem" className={styles.icon} />;
 
 
     const handleFollow = () => {

@@ -47,6 +47,7 @@ export default function HomePage() {
     fetchUsers();
   },[])
 
+  //Call back to delete user from users list
   const onDelete = (id: number) => {
 
     setUsers(users.filter(user =>{
@@ -55,7 +56,7 @@ export default function HomePage() {
 
   }
 
-  const renderUserCards = users.map(user =><Grid.Col span={getSpanValue()}><UserProfileCard user={user} handleDelete={onDelete} /></Grid.Col> )
+  const renderUserCards = users.map(user =><Grid.Col key={user.id} span={getSpanValue()}><UserProfileCard user={user} handleDelete={onDelete} /></Grid.Col> )
 
   return (
     <Grid m="lg">
