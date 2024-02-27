@@ -2,6 +2,7 @@
 
 import axios from 'axios';
 
+//To fetch users data from api.
 export async function getUsers() {
     try{
         const response = await axios.get('https://jsonplaceholder.typicode.com/users');
